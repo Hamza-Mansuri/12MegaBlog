@@ -1,0 +1,56 @@
+Mega Blog Application
+
+Features :-
+-> LogOut
+-> Login
+-> Refresh with States
+-> Rich Text Editor
+-> Used Routing
+-> Upload Post
+
+Appwrite for Backend Services:-
+-> Authentication
+-> Users Preferences (Email, Password)
+-> Sessions
+-> Log In Features (apple, google, microsoft, many more)
+
+-> DataBase Management
+-> Users Permissions
+
+-> HTML React-Parser
+-> React-Hook Forms
+-> Real Time Update in Slug
+
+===================
+
+File Making:-
+
+1- .env
+2- .env.sample (onlu for personel purpose)
+3- conf.js for storing url in variables
+4- auth for importing the objects (various functions)
+5- config.js  (posts and file related functions)
+
+6- store (configure store)
+7- authSclice (to make reducers, and added state)
+
+8- Components -> (Header, Footer) (importing all from index.js)
+9-Container which accept {children}
+
+10- Chnages in Footer, create Logo file in components
+
+
+========================================================================================================
+
+IMP Concept:- Environment Variables (should made in project Root)(like readme, package.json)
+
+hum koi na koi database/service use karege jaha pe sirf aap ki application baat krni hahiye.
+
+-> ab jo bhi hamara databse hoga usme hamari unique client id hogi, secrets, password, to wo sb react me nahi likh sakte, bcz ye ek front-end libarry he.
+
+-> to wo saare datas ko hum JavaScript ke Through nikaalege.
+
+-> isliye kuch variables ese hote he jo System Variables banaye jaaate he, inko rakhne ka tarika bhi alag hota he.
+
+-> aur jb application ko production me deploye karoge to waha pe like AWS, to waha pe unka ek secret manager hota he.(as it is variable ka naame aur uski value waha Copy krni hoti he.)
+
