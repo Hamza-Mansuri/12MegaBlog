@@ -35,10 +35,34 @@ File Making:-
 7- authSclice (to make reducers, and added state)
 
 8- Components -> (Header, Footer) (importing all from index.js)
-9-Container which accept {children}
+9- Container which accept {children}
 
-10- Chnages in Footer, create Logo file in components
+10- Chnages in Footer, create Logo file in components(set width 100%)
 
+11- creating LogoutBtn in Header.
+
+12- Header me functionality thodi optional he, bcz saari values sbko dikhana nahi dikhana wo optional he.
+-> bcz wo banda Login he yaa nahi he uske basis pe.
+
+13- Create Button.jsx
+14- create Input.jsx
+15- create Select.jsx
+16- Create PostCard.jsx
+
+17- Create LogIn
+18- Create Signup
+
+19- Create AuthLayout in Header.(it is a mechanism that how pages and route are protected)
+
+20- Create RTE.jsx (RealTime-Text-Editor)
+
+21- PostForm
+
+22- Creating all pages(Signup, Login, AddPost, (saare page dikhane ho to AllPost), (pura naya data dena padega to EditPost), Home, Post)
+
+23- edit functionalities in App.jsx
+
+24- edit functionalities in main.jsx
 
 ========================================================================================================
 

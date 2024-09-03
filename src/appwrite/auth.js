@@ -66,12 +66,13 @@ export class AuthService {
 
         this.client
             .setEndpoint(conf.appwriteUrl)
-            .setEndpoint(conf.appwriteProjectId);
+            .setProject(conf.appwriteProjectId);
 
         this.account = new Account(this.client);
 
     }
 
+    //https://appwrite.io/docs/products/auth/email-password
     //from asyn we will create account
     async createAccount({email, password, name}) {
 
@@ -85,7 +86,7 @@ export class AuthService {
                 //if user ka successfull account bnn gaya he to sidha login hi kara dete he
                 
                 //Call another method
-                return this.login( {email, password} );
+                return this.login({email, password});
             }
             else
             {
@@ -116,13 +117,14 @@ export class AuthService {
 
     }
 
+    //https://appwrite.io/docs/references/cloud/server-nodejs/users#get
     //suppose user direct home page pe land hua he, usko pata to lagna chahiye na ki wo login he ke nahi.
     async getCurrentUser () {
 
         try
         {
             //docs account api
-            await this.account.get(); //agar user ke paas account he to get karao //warna return null
+            return await this.account.get(); //agar user ke paas account he to get karao //warna return null
         }
         catch(error)
         {
@@ -169,4 +171,69 @@ export default authService
 //if kl application change hoti he to sirf ye file me changes hoge
 //under the hood sirf ye file ko pata he kya ho raha he.
 
-//jb bhi infure Authentication krna he appwrite se to ye file as it is use kr sakte he hum.
+//jb bhi infuture Authentication krna he appwrite se to ye file as it is use kr sakte he hum.
+
+
+//================
+
+// import conf from '../conf/conf.js';
+// import { Client, Account, ID } from "appwrite";
+
+
+// export class AuthService {
+//     client = new Client();
+//     account;
+
+//     constructor() {
+//         this.client
+//             .setEndpoint(conf.appwriteUrl)
+//             .setProject(conf.appwriteProjectId);
+//         this.account = new Account(this.client);
+            
+//     }
+
+//     async createAccount({email, password, name}) {
+//         try {
+//             const userAccount = await this.account.create(ID.unique(), email, password, name);
+//             if (userAccount) {
+//                 // call another method
+//                 return this.login({email, password});
+//             } else {
+//                return  userAccount;
+//             }
+//         } catch (error) {
+//             throw error;
+//         }
+//     }
+
+//     async login({email, password}) {
+//         try {
+//             return await this.account.createEmailPasswordSession(email, password);
+//         } catch (error) {
+//             throw error;
+//         }
+//     }
+
+//     async getCurrentUser() {
+//         try {
+//             return await this.account.get();
+//         } catch (error) {
+//             console.log("Appwrite serive :: getCurrentUser :: error", error);
+//         }
+
+//         return null;
+//     }
+
+//     async logout() {
+
+//         try {
+//             await this.account.deleteSessions();
+//         } catch (error) {
+//             console.log("Appwrite serive :: logout :: error", error);
+//         }
+//     }
+// }
+
+// const authService = new AuthService();
+
+// export default authService
