@@ -16,7 +16,6 @@ import React, { forwardRef , useId} from 'react'
 
 //it will be easy to understand in arrow Function
 
-<<<<<<< HEAD
 //Syntax:-
 
 // const Input = forwardRef(function Input({}, ref){
@@ -24,8 +23,6 @@ import React, { forwardRef , useId} from 'react'
 //     return <h1>Test</h1>
 // })
 
-=======
->>>>>>> a705f3c236df1e2a2785be1e6aa8e886a821f43f
 const Input = forwardRef( function Input({
 
     //konsi konsi chize chahiye hume wo yaha define krni he.
@@ -34,13 +31,8 @@ const Input = forwardRef( function Input({
     className = "",
     ...props
 
-<<<<<<< HEAD
      //this is ref, this will bhi usefull inahead.
 }, ref) {
-=======
-}, ref) //this is ref, this will bhi usefull inahead.
-{
->>>>>>> a705f3c236df1e2a2785be1e6aa8e886a821f43f
     const id = useId()
     return (
 
@@ -48,7 +40,6 @@ const Input = forwardRef( function Input({
 
             {/* agr kisi ne label pass kiya he to. */}
             {label && <label 
-<<<<<<< HEAD
             className='block mb-1 pl-1' 
             htmlFor={id}>
                 {label}
@@ -101,14 +92,3 @@ export default Input
 // })
 
 // export default Input
-=======
-            className='block mb-1' 
-            htmlFor={id}>
-                {label}
-            </label>}
-        </div>
-    )
-}
-
-export default Input
->>>>>>> a705f3c236df1e2a2785be1e6aa8e886a821f43f
