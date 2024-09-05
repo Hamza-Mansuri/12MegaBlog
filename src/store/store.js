@@ -1,30 +1,30 @@
-// import {configureStore} from "@reduxjs/toolkit"
-// import authSlice from "./authSlice"
+import {configureStore} from "@reduxjs/toolkit"
+import authSlice from "./authSlice"
 
-// const store = configureStore ({
+const store = configureStore ({
 
 
-//     reducer: {
+    reducer: {
 
-//         auth: authSlice,
-//         //TODO: add more slice from here
-//     }
-// });
+        auth: authSlice,
+        //TODO: add more slice from here
+    }
+});
 
-// export default store;
+export default store;
 
 //==========
 
 
-import {configureStore} from '@reduxjs/toolkit';
-import authSlice from './authSlice';
+// import {configureStore} from '@reduxjs/toolkit';
+// import authSlice from './authSlice';
 
-const store = configureStore({
-    reducer: {
-        auth : authSlice,
-        //TODO: add more slices here for posts
-    }
-});
+// const store = configureStore({
+//     reducer: {
+//         auth : authSlice,
+//         //TODO: add more slices here for posts
+//     }
+// });
 
 
-export default store;
+// export default store;

@@ -22,7 +22,7 @@ export class Services {
 
     }
 
-    async createPost( { title, slug, content, featuredImage, status, userId } ) 
+    async createPost( { slug, title, content, featuredImage, status, userId } ) 
     {
 
         try

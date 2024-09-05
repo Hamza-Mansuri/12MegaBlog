@@ -1,11 +1,17 @@
 // import React, { useEffect, useState } from "react";
 // import { Link, useNavigate, useParams } from "react-router-dom";
 // import appwriteService from "../appwrite/config";
-// import { Button, Container } from "../components";
+// // import { Button, Container } from "../components";
+
+// import { Button , Container} from "../components/index";
+
+// //Container ko {} me iport krna he, find the reason afterwards.
+// // import Container from "../components";
 
 // //aagr hamare paas html he to usko format krdo
 // //like agr bold he to bold ke format me likh do.
-// import parse from "html-react-parser";
+// import parse from "html-react-parser"
+
 // import { useSelector } from "react-redux";
 
 // //New Concept of Author.
